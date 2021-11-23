@@ -9,22 +9,38 @@ namespace Asssignment
     {
         public static void Main()
         {
-            // System.Console.Write("Masukkan tinggi segitiga: ");
-            // int n=int.Parse(Console.ReadLine());
-            int n = 10;
-            char ch = 'A';
-            int i, j, k, m;
-            for (i = 1; i <= n; i++)
+            System.Console.Write("Masukkan tinggi segitiga: ");
+            int n = int.Parse(Console.ReadLine());
+            int temp = 0;
+            string angka="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            for (int i = 0; i < n; i++)
             {
-                for (j = 5; j >= i; j--)
-                    Console.Write(" ");
-                for (k = 1; k <= i; k++)
-                    Console.Write(ch++);
-                ch--;
-                for (m = 1; m < i; m++)
-                    Console.Write(--ch);
-                Console.Write("\n");
-                ch = 'A';
+                for (int j = 0; j < n * 2 - 1; j++)
+                {
+                    if (j < n - i - 1 || j >= n + i) //segitiga kiri || kanan
+                    {
+                        System.Console.Write(" ");
+                    }
+                    else
+                    {
+                        if (j < n) //dibawah inputan angka++
+                        {
+                            temp++;
+                            if (temp == angka.Length+1)
+                                temp=(angka.Length)-temp+2;
+                            System.Console.Write(angka[temp-1]);
+                        }
+                        else //dibawah inputan angka--
+                        {
+                            temp--;
+                            if (temp==0 )
+                                temp =angka.Length;                             
+                            System.Console.Write(angka[temp-1]);  
+                        }
+                    }
+                }
+                System.Console.Write("\n");
+                temp = 0;
             }
         }
     }

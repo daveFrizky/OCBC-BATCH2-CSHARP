@@ -9,24 +9,38 @@ namespace Asssignment
     {
         public static void Main(string[] args)
         {
-            int i, j, k, l, n;
-            Console.Write("Enter the Range=");
-            n = int.Parse(Console.ReadLine());
-            for (i = 1; i <= n; i++)
+            System.Console.Write("Masukkan tinggi segitiga: ");
+            int n = int.Parse(Console.ReadLine());
+            int temp = 0;
+
+            for (int i = 0; i < n; i++)
             {
-                for (j = 1; j <= n - i; j++)
+                for (int j = 0; j < n * 2 - 1; j++)
                 {
-                    Console.Write(" ");
+                    if (j < n - i - 1 || j >= n + i) //segitiga kiri || kanan
+                    {
+                        System.Console.Write(" ");
+                    }
+                    else
+                    {
+                        if (j < n) //sebelum titik tengah angka++
+                        {
+                            temp++;
+                            if (temp == 10)
+                                temp = 9 - temp + 2;
+                            System.Console.Write(temp);
+                        }
+                        else //setelah titik tengah angka--
+                        {
+                            temp--;
+                            if (temp == 0)
+                                temp = 9;
+                            System.Console.Write(temp);
+                        }
+                    }
                 }
-                for (k = 1; k <= i; k++)
-                {
-                    Console.Write(k);
-                }
-                for (l = i - 1; l >= 1; l--)
-                {
-                    Console.Write(l);
-                }
-                Console.Write("\n");
+                System.Console.Write("\n");
+                temp = 0;
             }
         }
     }
