@@ -1,3 +1,5 @@
+LINK GITHUB = https://github.com/daveFrizky/OCBC-BATCH2-CSHARP/tree/main/Asssignment1
+
 1.  Pada menu awal terdapat 6 pilihan soal. Masukkan angka antara 1-6 untuk memilih soal untuk ditampilkan.
 
 2.  Setelah memilih Tipe Soal, berikut Penggunaan untuk setiap soalnya.
