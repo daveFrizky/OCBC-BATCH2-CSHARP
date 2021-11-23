@@ -22,6 +22,7 @@ namespace Sesi4
                 {10,100},
             };
 
+            int i,t;
             for ( t = 0; t < 10; t++)
             {
                 for ( i = 0; i < 2; i++)
