@@ -1,0 +1,31 @@
+1.  Pada menu awal terdapat 6 pilihan soal. Masukkan angka antara 1-6 untuk memilih soal untuk ditampilkan.
+
+2.  Setelah memilih Tipe Soal, berikut Penggunaan untuk setiap soalnya.
+   
+	    Soal 1 (Segitiga Alphabet) :
+            - Masukkan tinggi segitiga yang diinginkan
+            - Program akan menampilkan segitiga Alphabet sesuai yang diinputkan user
+
+    	Soal 2 (Segitiga Angka) :
+            - Masukkan tinggi segitiga yang diinginkan
+            - Program akan menampilkan segitiga angka sesuai yang diinputkan user
+
+    	Soal 3 (Faktorial) :
+            - Masukkan angka yang diinginkan
+            - Program akan menampilkan hasil faktorial dari angka yang diinput user
+
+    	Soal 4 (Membalik Angka) :
+            - Masukkan angka (input selain angka akan invalid)
+            - Program akan menampilkan angka yang urutannya dimulai dari angka paling akhir ke angka paling awal
+    	
+        Soal 5 (Konversi Angka ke kata dalam bahasa Inggris) :
+            - Masukkan Angka (bisa lebih dari 1 digit)
+            - Program akan menampilkan String yang berisi penyebutan setiap angka
+
+        Soal 6 (Palindrom) :
+            - Masukkan Kata yang diinginkan
+            - Program akan menampilkan hasil yaitu apakah kata tersebut palindrom atau bukan
+
+3.  Setelah 1 Soal selesai dijalankan, User akan diberi pilihan (Y/N) untuk kembali ke menu awal.
+    Jika User memasukan Y, maka akan kembali ke step 2 (memilih soal).
+    Jika User memasukan N, maka program akan berhenti.
