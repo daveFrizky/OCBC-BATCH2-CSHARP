@@ -14,11 +14,7 @@ namespace Sesi_3
             {
                 System.Console.WriteLine("i = {0}",i);
                 i++;
-                if (i>5)
-                {
-                    break;
-                }
-            } while (i<10);
+            } while (i<=5);
         }
     }
 }
