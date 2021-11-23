@@ -9,8 +9,6 @@ namespace Sesi_2
     {
        public static void Main()
        {
-            
-        
             Console.Write("Enter your age: ");
             int age=int.Parse(Console.ReadLine());
             Console.Write("Password: ");
