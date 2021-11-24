@@ -1,0 +1,16 @@
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\bin\Debug\net5.0\pro1.exe
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\bin\Debug\net5.0\pro1.deps.json
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\bin\Debug\net5.0\pro1.runtimeconfig.json
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\bin\Debug\net5.0\pro1.runtimeconfig.dev.json
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\bin\Debug\net5.0\pro1.dll
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\bin\Debug\net5.0\ref\pro1.dll
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\bin\Debug\net5.0\pro1.pdb
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\obj\Debug\net5.0\pro1.csproj.AssemblyReference.cache
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\obj\Debug\net5.0\pro1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\obj\Debug\net5.0\pro1.AssemblyInfoInputs.cache
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\obj\Debug\net5.0\pro1.AssemblyInfo.cs
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\obj\Debug\net5.0\pro1.csproj.CoreCompileInputs.cache
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\obj\Debug\net5.0\pro1.dll
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\obj\Debug\net5.0\ref\pro1.dll
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\obj\Debug\net5.0\pro1.pdb
+C:\Users\dbatz\Documents\Bootcamp\Sesi5\pro1\obj\Debug\net5.0\pro1.genruntimeconfig.cache
