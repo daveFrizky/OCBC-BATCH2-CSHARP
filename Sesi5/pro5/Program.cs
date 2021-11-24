@@ -10,7 +10,7 @@ namespace pro5
             bilangan2=angka2;
         }
         public virtual void penjumlahandll(){
-            System.Console.WriteLine("Overloading 1.....----->>>>>>>>");
+            System.Console.WriteLine("\nOverloading 1.....----->>>>>>>>");
             System.Console.WriteLine("Hasil penjumlahan angka {0} dan angka {1}= {2}",bilangan1,bilangan2,bilangan1+bilangan2);
             System.Console.WriteLine("Hasil perkalian angka {0} dan angka {1}= {2}",bilangan1,bilangan2,bilangan1*bilangan2);
 
@@ -19,7 +19,7 @@ namespace pro5
     class overide:Program{
         
         public override void penjumlahandll(){
-            System.Console.WriteLine("Overloading 2.....----->>>>>>>>");
+            System.Console.WriteLine("\nOverloading 2.....----->>>>>>>>");
             System.Console.WriteLine("Hasil pembagian angka {0} dan angka {1}= {2}",bilangan1,bilangan2,bilangan1/bilangan2);
             System.Console.WriteLine("Hasil pengurangan angka {0} dan angka {1}= {2}",bilangan1,bilangan2,bilangan1-bilangan2);
         }
