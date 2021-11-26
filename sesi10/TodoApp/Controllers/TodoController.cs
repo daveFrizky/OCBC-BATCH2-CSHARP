@@ -9,18 +9,19 @@ using TodoApp.Models;
 
 namespace TodoApp.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class TodoController : ControllerBase
     {
 
         private readonly ApiDbContext _context;
-        
-        [Route("TestRun")]
-        public ActionResult TestRun()
-        {
-            return Ok("success");
-        }
+
+        // [Route("TestRun")]
+        // [HttpGet]
+        // public ActionResult TestRun()
+        // {
+        //     return Ok("success");
+        // }
 
         public TodoController(ApiDbContext context)
         {
@@ -74,6 +75,20 @@ namespace TodoApp.Controllers
             existItem.Done = item.Done;
 
             await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteItem(int id)
+        {
+            var existItem = await _context.Items.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (existItem == null)
+                return NotFound();
+
+            _context.Items.Remove(existItem);
+            await _context.SaveChangesAsync();
+
             return Ok(existItem);
         }
     }
