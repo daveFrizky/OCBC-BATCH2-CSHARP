@@ -53,8 +53,8 @@ namespace TodoAppJWT
                 };
             });
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequiredConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApiDbContext>();
+            // services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequiredConfirmedAccount = true)
+            //     .AddEntityFrameworkStores<ApiDbContext>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
