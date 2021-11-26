@@ -70,3 +70,4 @@ C:\Users\dbatz\Documents\Bootcamp\sesi10\TodoAppJWT\obj\Debug\net5.0\TodoAppJWT.
 C:\Users\dbatz\Documents\Bootcamp\sesi10\TodoAppJWT\obj\Debug\net5.0\ref\TodoAppJWT.dll
 C:\Users\dbatz\Documents\Bootcamp\sesi10\TodoAppJWT\obj\Debug\net5.0\TodoAppJWT.pdb
 C:\Users\dbatz\Documents\Bootcamp\sesi10\TodoAppJWT\obj\Debug\net5.0\TodoAppJWT.genruntimeconfig.cache
+C:\Users\dbatz\Documents\Bootcamp\sesi10\TodoAppJWT\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
