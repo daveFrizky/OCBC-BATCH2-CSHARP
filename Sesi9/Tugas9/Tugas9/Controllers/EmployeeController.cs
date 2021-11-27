@@ -33,5 +33,29 @@ namespace Tugas9.Controllers
             return _context.GetEmployee(id);
 
         }
+
+        [HttpPost( Name = "Insert Employee")]
+        public ActionResult<IEnumerable<EmployeeItem>> AddEmployeeItem(EmployeeItem item)
+        {
+            _context = HttpContext.RequestServices.GetService(typeof(EmployeeContext)) as EmployeeContext;
+            return _context.AddEmployee(item);
+
+        }
+
+        [HttpPut("{id}", Name = "Update Employee")]
+        public ActionResult<IEnumerable<EmployeeItem>> UpdateEmployeeById(String id,EmployeeItem item)
+        {
+            _context = HttpContext.RequestServices.GetService(typeof(EmployeeContext)) as EmployeeContext;
+            return _context.UpdateById(id,item);
+
+        }
+
+        [HttpDelete("{id}", Name = "Delete Employee")]
+        public ActionResult<IEnumerable<EmployeeItem>> DeleteEmployeeById(String id)
+        {
+            _context = HttpContext.RequestServices.GetService(typeof(EmployeeContext)) as EmployeeContext;
+            return _context.DeleteById(id);
+
+        }
     }
 }
