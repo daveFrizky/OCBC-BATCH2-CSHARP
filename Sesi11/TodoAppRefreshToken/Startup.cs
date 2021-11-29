@@ -1,11 +1,11 @@
 using System;
-using System.Collections.Generic;
+using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,9 +13,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using TodoAppRefreshToken.Data;
+using Microsoft.AspNetCore.Mvc;
 using TodoAppRefreshToken.Configuration;
-using System.Text;
+using TodoAppRefreshToken.Data;
+
 
 namespace TodoAppRefreshToken
 {
@@ -31,14 +32,14 @@ namespace TodoAppRefreshToken
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddDbContext<ApiDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
+
             services.AddControllers();
 
-            var key =Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
+            var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
             var tokenValidationParams = new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
@@ -47,7 +48,7 @@ namespace TodoAppRefreshToken
                 ValidateAudience = false,
                 ValidateLifetime = true,
                 RequireExpirationTime = false,
-                ClockSkew=TimeSpan.Zero
+                ClockSkew = TimeSpan.Zero
             };
             services.AddSingleton(tokenValidationParams);
 
@@ -63,15 +64,42 @@ namespace TodoAppRefreshToken
 
                 jwt.SaveToken = true;
                 jwt.TokenValidationParameters = tokenValidationParams;
-                
-            });
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            });
+            services.AddDefaultIdentity<IdentityUser>(options =>
+             options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApiDbContext>();
+
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoAppRefreshToken", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "RefreshToken", Version = "v1" });
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme.",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                          new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "Bearer"
+                                }
+                            },
+                            new string[] {}
+                    }
+                });
+
             });
         }
 
@@ -90,7 +118,7 @@ namespace TodoAppRefreshToken
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

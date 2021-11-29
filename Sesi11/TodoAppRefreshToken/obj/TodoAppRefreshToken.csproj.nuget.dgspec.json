@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dbatz\\Documents\\Bootcamp\\Sesi11\\TodoAppRefreshToken\\TodoAppRefreshToken.csproj": {}
+    "C:\\Users\\dbatz\\Documents\\Bootcamp\\sesi11\\TodoAppRefreshToken\\TodoAppRefreshToken.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dbatz\\Documents\\Bootcamp\\Sesi11\\TodoAppRefreshToken\\TodoAppRefreshToken.csproj": {
+    "C:\\Users\\dbatz\\Documents\\Bootcamp\\sesi11\\TodoAppRefreshToken\\TodoAppRefreshToken.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dbatz\\Documents\\Bootcamp\\Sesi11\\TodoAppRefreshToken\\TodoAppRefreshToken.csproj",
+        "projectUniqueName": "C:\\Users\\dbatz\\Documents\\Bootcamp\\sesi11\\TodoAppRefreshToken\\TodoAppRefreshToken.csproj",
         "projectName": "TodoAppRefreshToken",
-        "projectPath": "C:\\Users\\dbatz\\Documents\\Bootcamp\\Sesi11\\TodoAppRefreshToken\\TodoAppRefreshToken.csproj",
+        "projectPath": "C:\\Users\\dbatz\\Documents\\Bootcamp\\sesi11\\TodoAppRefreshToken\\TodoAppRefreshToken.csproj",
         "packagesPath": "C:\\Users\\dbatz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dbatz\\Documents\\Bootcamp\\Sesi11\\TodoAppRefreshToken\\obj\\",
+        "outputPath": "C:\\Users\\dbatz\\Documents\\Bootcamp\\sesi11\\TodoAppRefreshToken\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
