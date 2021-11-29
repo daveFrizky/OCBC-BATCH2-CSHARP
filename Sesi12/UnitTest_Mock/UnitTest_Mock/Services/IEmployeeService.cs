@@ -8,7 +8,7 @@ namespace UnitTest_Mock.Services
 {
     public interface IEmployeeService
     {
-        Task<string> GetEmployeeId(int EmpId);
+        Task<string> GetEmployeeById(int EmpId);
         Task<Employee> GetEmployeeDetails(int EmpId);
     }
 }

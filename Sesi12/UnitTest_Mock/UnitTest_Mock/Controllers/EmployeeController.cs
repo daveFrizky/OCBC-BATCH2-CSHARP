@@ -26,7 +26,7 @@ namespace UnitTest_Mock.Controllers
         [HttpGet(nameof(GetEmployeeById))]
         public async Task<string> GetEmployeeById(int EmpId)
         {
-            var result=await _employeeService.GetEmployeeId(EmpId);
+            var result=await _employeeService.GetEmployeeById(EmpId);
             return result;
         }
 
