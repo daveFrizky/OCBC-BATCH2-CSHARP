@@ -1,0 +1,19 @@
+Kode peserta    : FSDO002ONL001
+Nama peserta    : David Chrissando Frizky
+GitHub link 	: https://github.com/daveFrizky/OCBC-BATCH2-CSHARP/tree/main/Assignment3
+
+Panduan menjalankan program
+1. Sebelum menjalankan program ==> Create database "movies".
+2. Kemudian pilih tab import lalu masukan file "data_movies.sql"
+3. open folder program menggunakan VSCODE kemudian buka terminal kemudian ketikan "dotnet run".
+
+
+panduan postman
+1. Register User masukkan email password 
+2. Login user dengan akun yang sudah dibuat, setelah login berhasil copy token
+3. Input token pada tab auth dan pilih tipe auth yaitu "Bearer Token" dan masukkan token dari login anda
+3. Get ALL Movies ==> pilih GET masukkan link kemudian send untuk Get semua data movie
+4. Add Data ==> pilih POST masukkan link kemudian ke body isi data kemudian tekan send untuk insert data movie.
+5. Get Movies By ID ==> pilih GET masukkan link+"/id" kemudian tekan send untuk get data movie by id.
+6. Update Data ==> pilih PUT kemudian masukkan id pada parameter atau dengan tambahkan "/id" pada link lalu, ke body edit data kemudian tekan send untuk Edit data movie.
+7. Delete Data ==> pilih DELETE kemudian masukkan id pada parameter atau dengan tambahkan "/id" pada link lalu, send untuk delete data movie by id
