@@ -20,13 +20,14 @@ namespace UnitTest_Mock.Services
             _apiDbContext = apiDbContext;
         }
 
+        #endregion
+        
         public async Task<Employee> GetEmployeeDetails(int EmpId)
         {
             var emp = await _apiDbContext.Employees.FirstOrDefaultAsync(c => c.Id == EmpId);
             return emp;
         }
-        #endregion
-
+        
         public async Task<string> GetEmployeeById(int EmpId)
         {
             var name = await _apiDbContext.Employees.Where(c=>c.Id == EmpId).Select(d=> d.Name).FirstOrDefaultAsync();
